@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세대 융합 셰어키친 퍼실리테이터 | Intergenerational Kitchen Facilitator</title>
+    <meta name="description" content="어르신의 정겨운 손맛과 청년의 따뜻한 온기가 연결되는 세대 융합 셰어키친 랜딩페이지">
+    <meta property="og:title" content="세대 융합 셰어키친 퍼실리테이터">
+    <meta property="og:description" content="어르신의 정겨운 손맛과 청년의 따뜻한 온기가 연결되는 세대 융합 셰어키친 랜딩페이지">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: Gowun Batang, Noto Sans KR, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        indigoTheme: {
+                            50: '#f5f7ff',
+                            100: '#edeefa',
+                            200: '#dce2f7',
+                            300: '#c5cef2',
+                            400: '#9faee8',
+                            500: '#7588de',
+                            600: '#5264cc',
+                            700: '#4351b8',
+                            800: '#2d3780',
+                            900: '#1e2557',
+                            950: '#13183b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', '"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Gowun Batang"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e0e7ff;
+            color: #1e1b4b;
+            font-family: 'Noto Sans KR', 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-serif-kr {
+            font-family: 'Gowun Batang', serif;
+        }
+        .glass-nav {
+            background: rgba(224, 231, 255, 0.92);
+            backdrop-filter: blur(14px);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e7ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a5b4fc;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#4338ca] selection:text-white">
+
+    <!-- 1. Header / Navigation -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-[#c7d2fe] transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Wordmark / Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-[#3730a3] text-white flex items-center justify-center font-bold text-lg shadow-sm group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-utensils text-[#e0e7ff] text-base"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-[#1e1b4b]">
+                            세대 융합 셰어키친
+                        </span>
+                        <span class="text-[10px] tracking-widest uppercase font-semibold text-[#6366f1]">
+                            Intergenerational Kitchen
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#312e81]">
+                    <a href="#about" class="hover:text-[#4338ca] transition-colors whitespace-nowrap">소개</a>
+                    <a href="#programs" class="hover:text-[#4338ca] transition-colors whitespace-nowrap">프로그램</a>
+                    <a href="#roadmap" class="hover:text-[#4338ca] transition-colors whitespace-nowrap">추진 로드맵</a>
+                    <a href="#stories" class="hover:text-[#4338ca] transition-colors whitespace-nowrap">참여자 이야기</a>
+                    <a href="#apply" class="hover:text-[#4338ca] transition-colors whitespace-nowrap">신청안내</a>
+                </nav>
+
+                <!-- Primary CTA Pill -->
+                <div class="hidden md:flex items-center">
+                    <button onclick="openModal()" class="bg-[#3730a3] hover:bg-[#312e81] text-[#e0e7ff] text-sm font-semibold px-6 py-2.5 rounded-full shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer">
+                        <span>시범 클래스 신청</span>
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="p-2 text-[#1e1b4b] hover:text-[#4338ca] focus:outline-none" aria-label="메뉴 열기">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-[#dbe4ff] border-b border-[#c7d2fe] px-6 py-5 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-[#1e1b4b] hover:text-[#4338ca]">소개</a>
+            <a href="#programs" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-[#1e1b4b] hover:text-[#4338ca]">프로그램</a>
+            <a href="#roadmap" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-[#1e1b4b] hover:text-[#4338ca]">추진 로드맵</a>
+            <a href="#stories" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-[#1e1b4b] hover:text-[#4338ca]">참여자 이야기</a>
+            <a href="#apply" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-[#1e1b4b] hover:text-[#4338ca]">신청안내</a>
+            <button onclick="toggleMobileMenu(); openModal();" class="w-full mt-2 bg-[#3730a3] hover:bg-[#312e81] text-[#e0e7ff] font-semibold px-5 py-3 rounded-full shadow text-center flex items-center justify-center gap-2 cursor-pointer">
+                <span>시범 클래스 신청하기</span>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section (Blue / Violet Palette) -->
+    <section class="relative pt-12 pb-24 md:pt-16 md:pb-32 overflow-hidden bg-gradient-to-b from-[#e0e7ff] via-[#ede9fe] to-[#e0e7ff]">
+        <!-- Soft decorative glow elements -->
+        <div class="absolute top-8 left-1/4 w-32 h-32 rounded-full bg-[#c7d2fe] opacity-50 blur-2xl pointer-events-none"></div>
+        <div class="absolute top-28 left-12 w-48 h-48 rounded-full bg-[#ddd6fe] opacity-40 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-20 right-16 w-64 h-64 rounded-full bg-[#c4b5fd] opacity-40 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Content Column -->
+                <div class="lg:col-span-6 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#4338ca] bg-[#e0e7ff] border border-[#c7d2fe] px-3.5 py-1.5 rounded-full shadow-xs">
+                        <i class="fa-solid fa-wand-magic-sparkles text-[#6366f1] text-xs"></i>
+                        <span>Intergenerational Share Kitchen</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1e1b4b] tracking-tight leading-[1.15] font-serif-kr">
+                        어르신의 정갈한 손맛,<br>
+                        <span class="text-[#4338ca] underline decoration-[#a5b4fc] decoration-4 underline-offset-8">
+                            청년의 따뜻한 밥상
+                        </span>으로 이어집니다
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-[#3730a3]/80 leading-relaxed max-w-xl font-normal">
+                        어르신에게는 평생 축적한 요리 지혜와 활력 넘치는 자아실현을,
+                        청년에게는 든든한 온기와 정겨운 이웃을 선물합니다. 
+                        지역 복지관 공유주방을 거점으로 세대 간 벽을 허무는 선순환 공동체입니다.
+                    </p>
+
+                    <!-- Dual CTAs -->
+                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                        <button onclick="openModal()" class="bg-[#3730a3] hover:bg-[#312e81] text-[#e0e7ff] font-semibold text-base px-8 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-3 cursor-pointer">
+                            <span>시범 클래스 신청</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </button>
+                        <a href="#programs" class="bg-white hover:bg-[#f5f7ff] text-[#3730a3] font-semibold text-base px-7 py-3.5 rounded-full border border-[#c7d2fe] transition-all shadow-xs">
+                            프로그램 둘러보기
+                        </a>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="pt-8 border-t border-[#c7d2fe] grid grid-cols-3 gap-6 max-w-md">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-[#1e1b4b] tabular-nums">
+                                90<span class="text-lg font-normal text-[#6366f1]">%+</span>
+                            </div>
+                            <div class="text-xs text-[#4338ca] font-medium mt-0.5">참여자 만족도</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-[#1e1b4b] tabular-nums">
+                                100<span class="text-lg font-normal text-[#6366f1]">%</span>
+                            </div>
+                            <div class="text-xs text-[#4338ca] font-medium mt-0.5">세대 공감 지수</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-[#1e1b4b]">
+                                공공연계
+                            </div>
+                            <div class="text-xs text-[#4338ca] font-medium mt-0.5">복지관 공유주방</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Column (Circular Dish Benchmarking in Violet Glow) -->
+                <div class="lg:col-span-6 flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-lg">
+                        
+                        <!-- Circular Dish Container -->
+                        <div class="relative rounded-full aspect-square p-3 sm:p-5 bg-gradient-to-br from-[#c7d2fe] via-[#ddd6fe] to-[#c4b5fd] shadow-2xl flex items-center justify-center">
+                            <div class="w-full h-full rounded-full overflow-hidden border-4 border-white/80 shadow-inner relative group bg-white">
+                                <img
+                                    src="/assets/ghibli_style_intergenerational_cooking.jpg"
+                                    alt="할머니 할아버지 어르신께 남자 대학생과 여자 대학생이 함께 요리를 배우는 화목하고 따뜻한 애니메이션 일러스트"
+                                    class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                                    referrerpolicy="no-referrer"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-indigo-950/25 to-transparent flex items-end p-8">
+                                    <div class="text-white text-left">
+                                        <span class="text-xs font-semibold uppercase tracking-wider text-[#c7d2fe] drop-shadow-sm">
+                                            Warm Studio Art · 세대 융합 주방
+                                        </span>
+                                        <h4 class="text-xl sm:text-2xl font-bold font-serif-kr drop-shadow-md">
+                                            어르신과 남녀 청년의 화목한 손맛 배움터
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating badge top-right -->
+                        <div class="absolute -top-3 -right-3 bg-white/95 backdrop-blur border border-[#c7d2fe] rounded-2xl p-4 shadow-lg flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#3730a3] text-white flex items-center justify-center">
+                                <i class="fa-solid fa-heart text-[#c7d2fe] text-base"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-[#1e1b4b]">세대 융합 1:1 파트너십</div>
+                                <div class="text-[11px] text-[#4f46e5]">손맛 전수 및 따뜻한 정서 교류</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating badge bottom-left -->
+                        <div class="absolute -bottom-4 -left-3 bg-white/95 backdrop-blur border border-[#c7d2fe] rounded-2xl px-5 py-3 shadow-lg flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-[#e0e7ff] flex items-center justify-center text-[#4338ca]">
+                                <i class="fa-solid fa-location-dot text-sm"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-xs font-bold text-[#1e1b4b]">지역사회 복지관 2F</div>
+                                <div class="text-[11px] text-[#4f46e5]">공유주방 시설 완비</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 3-Column Curved Pill Quick-Bar (Violet & Indigo Accent) -->
+        <div class="max-w-5xl mx-auto px-4 mt-16 sm:mt-20">
+            <div class="bg-white/80 backdrop-blur rounded-3xl sm:rounded-full p-4 sm:p-3 shadow-md border border-[#c7d2fe] grid grid-cols-1 sm:grid-cols-3 gap-3">
+                
+                <a href="#about" class="flex items-center gap-3.5 px-5 py-3 rounded-2xl sm:rounded-full hover:bg-[#ede9fe] transition-colors group">
+                    <div class="w-10 h-10 rounded-full bg-[#e0e7ff] text-[#4338ca] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-users text-sm"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xs text-[#6366f1] font-medium">참여자 가치</div>
+                        <div class="text-sm font-bold text-[#1e1b4b]">어르신·청년 상생 비전</div>
+                    </div>
+                </a>
+
+                <a href="#programs" class="flex items-center gap-3.5 px-5 py-3 rounded-2xl sm:rounded-full hover:bg-[#ede9fe] transition-colors group">
+                    <div class="w-10 h-10 rounded-full bg-[#e0e7ff] text-[#4338ca] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-book-open text-sm"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xs text-[#6366f1] font-medium">핵심 프로그램</div>
+                        <div class="text-sm font-bold text-[#1e1b4b]">쿠킹 클래스 & 레시피북</div>
+                    </div>
+                </a>
+
+                <button onclick="openModal()" class="flex items-center justify-between px-6 py-3 rounded-2xl sm:rounded-full bg-[#3730a3] hover:bg-[#312e81] text-[#e0e7ff] transition-all group text-left cursor-pointer">
+                    <div>
+                        <div class="text-xs text-[#c7d2fe] font-medium">지금 참여하기</div>
+                        <div class="text-sm font-bold text-white">시범 클래스 신청</div>
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-[#4f46e5] flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                        <i class="fa-solid fa-arrow-right text-xs text-white"></i>
+                    </div>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Problem & Value Proposition Section -->
+    <section id="about" class="py-24 bg-[#f5f7ff] border-t border-[#c7d2fe]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#4f46e5] bg-[#e0e7ff] border border-[#c7d2fe] px-3.5 py-1.5 rounded-full">
+                    Why Share Kitchen?
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1e1b4b] mt-4 font-serif-kr">
+                    왜 <span class="text-[#4338ca] underline decoration-[#c4b5fd] decoration-2 underline-offset-4">세대 융합 셰어키친</span>인가요?
+                </h2>
+                <p class="text-[#3730a3]/80 mt-4 text-base leading-relaxed">
+                    고령화로 인한 어르신의 사회적 고립과 1인 가구 청년의 식생활 문제를 한 번에 해결하는
+                    지속 가능한 3대 핵심 가치를 만듭니다.
+                </p>
+            </div>
+
+            <!-- Asymmetric Showcase Card -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-[#c7d2fe] shadow-sm mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="text-xs font-bold text-[#6366f1] uppercase tracking-wider">
+                            Core Mission · 세대 연결의 새로운 식문화
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-[#1e1b4b] font-serif-kr leading-snug">
+                            "혼자 먹는 밥에서, 함께 짓고 나누는 온기의 식탁으로"
+                        </h3>
+                        <p class="text-sm sm:text-base text-[#312e81]/80 leading-relaxed">
+                            지역 복지관의 유휴 공유주방을 활용하여, 손맛이 깃든 어르신의 고유 레시피를 청년들과 나눕니다. 
+                            단순한 요리 강좌를 넘어 세대 간 정서적 유대를 복원하고, 도시재생과 노인 일자리 사업으로 
+                            이어지는 건강한 지역 상생 생태계를 구축합니다.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-[#ede9fe]">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-[#4338ca] text-base mt-0.5"></i>
+                                <div>
+                                    <div class="text-sm font-bold text-[#1e1b4b]">지역 공유자원 재생</div>
+                                    <div class="text-xs text-[#6366f1]">복지관 유휴 주방 100% 활용</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-[#4338ca] text-base mt-0.5"></i>
+                                <div>
+                                    <div class="text-sm font-bold text-[#1e1b4b]">세대 정서적 고립 해소</div>
+                                    <div class="text-xs text-[#6366f1]">주 1회 정례 밥상 커뮤니티</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 flex justify-center w-full">
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-white/90 w-full max-w-lg lg:max-w-xl group bg-white">
+                            <img
+                                src="/assets/photo_elderly_teaching_male_student.jpg"
+                                alt="인자한 어르신이 남자 대학생에게 정성스레 요리를 가르쳐주며 환하게 웃는 따뜻한 주방 풍경"
+                                class="w-full h-80 sm:h-96 object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                                referrerpolicy="no-referrer"
+                            >
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-5 text-white text-left">
+                                <span class="text-xs font-bold text-[#c7d2fe] uppercase tracking-wider block mb-1">
+                                    따뜻한 손맛 전수와 유대
+                                </span>
+                                <h4 class="text-base sm:text-lg font-bold font-serif-kr">
+                                    "젊은 친구, 이렇게 볶아야 맛있단다" — 어르신과 청년의 행복한 요리
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 3 Beneficiary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Value 1: Senior -->
+                <div class="bg-white rounded-3xl p-8 border border-[#c7d2fe] shadow-xs hover:shadow-md transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-[#ede9fe] text-[#4338ca] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <div class="text-xs font-bold text-[#6366f1] uppercase tracking-wider mb-1">
+                        Senior · 어르신
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1e1b4b] mb-3 font-serif-kr">
+                        사회적 고립 해소 & 자아실현
+                    </h3>
+                    <p class="text-[#3730a3]/80 text-sm leading-relaxed mb-4">
+                        외로움에서 벗어나 청년들에게 평생 축적한 손맛 레시피와 삶의 지혜를 전수합니다. 
+                        정서적 유대감과 자존감을 되찾고 향후 노인 일자리 사업으로 연계됩니다.
+                    </p>
+                    <div class="text-xs text-[#312e81] font-semibold flex items-center gap-1.5 pt-3 border-t border-[#ede9fe]">
+                        <i class="fa-solid fa-check text-[#4f46e5]"></i>
+                        <span>손맛 레시피 전수 강사 활동</span>
+                    </div>
+                </div>
+
+                <!-- Value 2: Youth -->
+                <div class="bg-white rounded-3xl p-8 border border-[#c7d2fe] shadow-xs hover:shadow-md transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-[#ede9fe] text-[#4338ca] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div class="text-xs font-bold text-[#6366f1] uppercase tracking-wider mb-1">
+                        Youth · 청년
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1e1b4b] mb-3 font-serif-kr">
+                        따뜻한 집밥 & 세대 소통
+                    </h3>
+                    <p class="text-[#3730a3]/80 text-sm leading-relaxed mb-4">
+                        배달음식과 인스턴트에 지친 1인 가구 청년들에게 정성 가득한 집밥을 전합니다. 
+                        어르신과의 대화를 통해 세대 간 벽을 허물고 따뜻한 이웃의 정을 경험합니다.
+                    </p>
+                    <div class="text-xs text-[#312e81] font-semibold flex items-center gap-1.5 pt-3 border-t border-[#ede9fe]">
+                        <i class="fa-solid fa-check text-[#4f46e5]"></i>
+                        <span>영양 균형 집밥 조리법 습득</span>
+                    </div>
+                </div>
+
+                <!-- Value 3: Community -->
+                <div class="bg-white rounded-3xl p-8 border border-[#c7d2fe] shadow-xs hover:shadow-md transition-all group hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-[#ede9fe] text-[#4338ca] flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div class="text-xs font-bold text-[#6366f1] uppercase tracking-wider mb-1">
+                        Community · 지역사회
+                    </div>
+                    <h3 class="text-xl font-bold text-[#1e1b4b] mb-3 font-serif-kr">
+                        공유자원 활용 & 도시재생
+                    </h3>
+                    <p class="text-[#3730a3]/80 text-sm leading-relaxed mb-4">
+                        종합사회복지관의 유휴 조리시설을 활성화하고 주민참여형 도시재생 거점으로 전환합니다. 
+                        지속 가능한 지역 공동체 커뮤니티 비즈니스 모델을 실현합니다.
+                    </p>
+                    <div class="text-xs text-[#312e81] font-semibold flex items-center gap-1.5 pt-3 border-t border-[#ede9fe]">
+                        <i class="fa-solid fa-check text-[#4f46e5]"></i>
+                        <span>복지관 유휴 인프라 가치 극대화</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Core Programs Section -->
+    <section id="programs" class="py-24 bg-[#e0e7ff] border-t border-[#c7d2fe]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#4338ca] bg-[#ede9fe] border border-[#c7d2fe] px-3.5 py-1.5 rounded-full">
+                    Main Programs
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1e1b4b] mt-4 font-serif-kr">
+                    세대 융합 셰어키친 <span class="text-[#4338ca]">핵심 프로그램</span>
+                </h2>
+                <p class="text-[#3730a3]/80 mt-4 text-base leading-relaxed">
+                    단순 요리 강습을 넘어, 이야기와 인생의 지혜를 함께 엮어내는 3가지 특화 세션입니다.
+                </p>
+
+                <!-- Interactive Filter Tabs -->
+                <div class="flex items-center justify-center gap-2 mt-8">
+                    <button onclick="filterPrograms('all')" id="tab-all" class="prog-tab px-4 py-2 text-xs font-bold rounded-full transition-all cursor-pointer bg-[#3730a3] text-white shadow-sm">
+                        전체 프로그램 (3)
+                    </button>
+                    <button onclick="filterPrograms('cooking')" id="tab-cooking" class="prog-tab px-4 py-2 text-xs font-bold rounded-full transition-all cursor-pointer bg-white text-[#312e81] hover:bg-[#ede9fe]">
+                        쿠킹 클래스
+                    </button>
+                    <button onclick="filterPrograms('dining')" id="tab-dining" class="prog-tab px-4 py-2 text-xs font-bold rounded-full transition-all cursor-pointer bg-white text-[#312e81] hover:bg-[#ede9fe]">
+                        세대 공감 밥상
+                    </button>
+                    <button onclick="filterPrograms('archive')" id="tab-archive" class="prog-tab px-4 py-2 text-xs font-bold rounded-full transition-all cursor-pointer bg-white text-[#312e81] hover:bg-[#ede9fe]">
+                        동네 레시피북
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3 Vertical Feature Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="programCards">
+                
+                <!-- Program 1 (Artistic Watercolor) -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-[#c7d2fe] shadow-sm flex flex-col justify-between hover:shadow-md transition-all group" data-category="cooking">
+                    <div>
+                        <!-- Korean Watercolor Style Card Banner -->
+                        <div class="h-48 w-full overflow-hidden bg-[#e0e7ff] relative border-b border-[#c7d2fe]">
+                            <img
+                                src="/assets/korean_cooking_traditional_watercolor.jpg"
+                                alt="어르신과 청년 학생들이 함께 잡채와 파전을 부치고 김치를 담그는 수채화 일러스트"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                referrerpolicy="no-referrer"
+                            >
+                            <span class="absolute top-4 right-4 text-xs font-bold text-[#4338ca] bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-xs">
+                                🎨 전통 수채화 · 쿠킹 클래스
+                            </span>
+                        </div>
+
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-9 h-9 rounded-xl bg-[#e0e7ff] text-[#3730a3] flex items-center justify-center font-extrabold text-sm font-sans">
+                                    01
+                                </span>
+                                <h3 class="text-xl font-bold text-[#1e1b4b] font-serif-kr">
+                                    어르신 레시피 쿠킹 클래스
+                                </h3>
+                            </div>
+                            <p class="text-sm text-[#3730a3]/80 leading-relaxed mb-6">
+                                한평생 손끝에 익은 어르신만의 시그니처 손맛 레시피를 청년들에게 1:1로 전수합니다. 
+                                계량스푼 대신 눈대중과 손맛 속에 담긴 음식의 비결과 식재료 손질 노하우를 배웁니다.
+                            </p>
+
+                            <ul class="space-y-3 text-xs text-[#312e81] border-t border-[#ede9fe] pt-4">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>어르신 시그니처 밑반찬 & 집밥 레시피 전수</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>어르신-청년 1:1 밀착 요리 파트너 매칭</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>제철 로컬 식재료 활용 건강 식단 구성</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="px-8 pb-8 pt-2 border-t border-[#ede9fe] flex items-center justify-between">
+                        <span class="text-xs text-[#6366f1] font-medium">격주 토요일 11:00</span>
+                        <button onclick="openModal()" class="text-xs font-bold text-[#4338ca] hover:text-[#1e1b4b] flex items-center gap-1 cursor-pointer group-hover:translate-x-1 transition-transform">
+                            <span>상세 신청</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program 2 (Impressionistic Oil Painting) -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-[#c7d2fe] shadow-sm flex flex-col justify-between hover:shadow-md transition-all group" data-category="dining">
+                    <div>
+                        <!-- Warm Colored Pencil Storybook Style Card Banner -->
+                        <div class="h-48 w-full overflow-hidden bg-[#e0e7ff] relative border-b border-[#c7d2fe]">
+                            <img
+                                src="/assets/peaceful_korean_banquet_colored_pencil.jpg"
+                                alt="남녀노소 온 가족과 이웃들이 한옥 마루에서 풍족하고 따뜻한 한식 밥상을 나누는 평화로운 색연필 동화 삽화"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                referrerpolicy="no-referrer"
+                            >
+                            <span class="absolute top-4 right-4 text-xs font-bold text-[#4338ca] bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-xs">
+                                ✏️ 감성 색연필 동화 · 세대 공감 밥상
+                            </span>
+                        </div>
+
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-9 h-9 rounded-xl bg-[#e0e7ff] text-[#3730a3] flex items-center justify-center font-extrabold text-sm font-sans">
+                                    02
+                                </span>
+                                <h3 class="text-xl font-bold text-[#1e1b4b] font-serif-kr">
+                                    세대 공감 한 끼 밥상
+                                </h3>
+                            </div>
+                            <p class="text-sm text-[#3730a3]/80 leading-relaxed mb-6">
+                                함께 땀 흘려 정성껏 완성한 요리를 둥글게 둘러앉아 나눕니다. 
+                                따뜻한 집밥을 먹으며 어르신의 삶의 이야기와 청년들의 고민을 나누며 세대 간 공감대를 형성합니다.
+                            </p>
+
+                            <ul class="space-y-3 text-xs text-[#312e81] border-t border-[#ede9fe] pt-4">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>정갈한 온기 한 끼 식사 및 음식 나눔</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>어르신 인생 스토리 & 청년 일상 공감 토크</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>이웃사촌 멘토링 및 정서적 지지 기반 형성</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="px-8 pb-8 pt-2 border-t border-[#ede9fe] flex items-center justify-between">
+                        <span class="text-xs text-[#6366f1] font-medium">조리 직후 12:30~13:30</span>
+                        <button onclick="openModal()" class="text-xs font-bold text-[#4338ca] hover:text-[#1e1b4b] flex items-center gap-1 cursor-pointer group-hover:translate-x-1 transition-transform">
+                            <span>상세 신청</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Program 3 (Handcrafted Hanji Papercut Collage) -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-[#c7d2fe] shadow-sm flex flex-col justify-between hover:shadow-md transition-all group" data-category="archive">
+                    <div>
+                        <!-- Craft Papercut Collage Style Card Banner -->
+                        <div class="h-48 w-full overflow-hidden bg-[#e0e7ff] relative border-b border-[#c7d2fe]">
+                            <img
+                                src="/assets/korean_recipe_book_craft_collage.jpg"
+                                alt="한지와 캘리그라피, 전통 식재료 도장을 찍으며 만드는 수제 레시피 북 콜라주 공예 아트"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                referrerpolicy="no-referrer"
+                            >
+                            <span class="absolute top-4 right-4 text-xs font-bold text-[#4338ca] bg-white/95 backdrop-blur px-3 py-1 rounded-full shadow-xs">
+                                📜 한지 공예 콜라주 · 레시피 북
+                            </span>
+                        </div>
+
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-9 h-9 rounded-xl bg-[#e0e7ff] text-[#3730a3] flex items-center justify-center font-extrabold text-sm font-sans">
+                                    03
+                                </span>
+                                <h3 class="text-xl font-bold text-[#1e1b4b] font-serif-kr">
+                                    우리 동네 레시피 북 제작
+                                </h3>
+                            </div>
+                            <p class="text-sm text-[#3730a3]/80 leading-relaxed mb-6">
+                                클래스를 통해 전수된 레시피와 참여자들의 인터뷰를 기록합니다. 
+                                동네의 서사가 녹아있는 고유 쿠킹북을 발간하여 지역 브랜드로 확산하고 자긍심을 고취합니다.
+                            </p>
+
+                            <ul class="space-y-3 text-xs text-[#312e81] border-t border-[#ede9fe] pt-4">
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>어르신별 시그니처 레시피 데이터베이스(DB) 구축</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>스토리텔링 마을 요리책 독립 출판 및 배포</span>
+                                </li>
+                                <li class="flex items-center gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-[#4338ca]"></i>
+                                    <span>지역 특화 밀키트 패키지 상품 개발 기초 자료</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="px-8 pb-8 pt-2 border-t border-[#ede9fe] flex items-center justify-between">
+                        <span class="text-xs text-[#6366f1] font-medium">분기별 아카이브 발간</span>
+                        <button onclick="openModal()" class="text-xs font-bold text-[#4338ca] hover:text-[#1e1b4b] flex items-center gap-1 cursor-pointer group-hover:translate-x-1 transition-transform">
+                            <span>상세 신청</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. 3-Stage Business Roadmap Section (Deep Midnight Navy/Purple) -->
+    <section id="roadmap" class="py-24 bg-[#1e1b4b] text-[#ede9fe] relative overflow-hidden">
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-[#4338ca]/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#c7d2fe] bg-[#312e81] px-3.5 py-1.5 rounded-full">
+                    Business Roadmap
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 font-serif-kr">
+                    🎯 3단계 <span class="text-[#a5b4fc]">비즈니스 추진 로드맵</span>
+                </h2>
+                <p class="text-[#c7d2fe]/80 mt-4 text-base leading-relaxed">
+                    최소 기능 시범 검증(MVP)에서부터 공공 연계 거점 안착, 노인 일자리 수익 모델까지의 체계적 청사진입니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Step 1 -->
+                <div class="bg-[#2e2a72] rounded-3xl p-8 border border-[#4338ca] relative hover:border-[#818cf8] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 bg-[#4f46e5] text-white text-xs font-bold rounded-full">
+                                1단계 · MVP 검증
+                            </span>
+                            <span class="text-xs text-[#a5b4fc] font-mono">1~3개월차</span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-white mb-3 font-serif-kr">
+                            기반 구축 & 파일럿 운영
+                        </h3>
+                        <p class="text-sm text-[#ddd6fe] leading-relaxed mb-6">
+                            지역 종합사회복지관과 협약하여 유휴 공유주방 공간을 확보하고, 
+                            주말 원데이 팝업 쿠킹 클래스를 시범 런칭합니다. 
+                            참여자 정서적 유대감 및 만족도 90% 이상 검증을 목표로 합니다.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs text-[#c4b5fd] border-t border-[#4338ca]/60 pt-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>복지관 공유주방 기물 및 장소 협약</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>최소 예산 주말 원데이 팝업 클래스 운영</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>참여자 피드백 수렴 및 커리큘럼 고도화</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 pt-3 text-[11px] text-[#a5b4fc] font-medium">
+                        초기 검증 지표: 만족도 90% 달성
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-[#2e2a72] rounded-3xl p-8 border border-[#4338ca] relative hover:border-[#818cf8] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 bg-[#6366f1] text-white text-xs font-bold rounded-full">
+                                2단계 · 거점 안착
+                            </span>
+                            <span class="text-xs text-[#a5b4fc] font-mono">4~6개월차</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-3 font-serif-kr">
+                            공공 연계 & 정주화
+                        </h3>
+                        <p class="text-sm text-[#cbdcc9] leading-relaxed mb-6">
+                            지자체 도시재생 주민공모사업 및 청년 공동체 지원사업을 수주합니다. 
+                            주 1회 정례 모임을 체계화하고 어르신 레시피 데이터베이스(DB)를 본격적으로 구축합니다.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs text-[#c4b5fd] border-t border-[#4338ca]/60 pt-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>지자체 도시재생 공모사업 선정 및 지원금 유치</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>주간 정례 셰어키친 모임 운영 안정화</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>우리 동네 셰프 1기 레시피북 초판 인쇄</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 pt-3 text-[11px] text-[#a5b4fc] font-medium">
+                        성장 지표: 정례 회원 30쌍 확보
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-[#2e2a72] rounded-3xl p-8 border border-[#4338ca] relative hover:border-[#818cf8] transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 bg-[#7c3aed] text-white text-xs font-bold rounded-full">
+                                3단계 · 사업 확장
+                            </span>
+                            <span class="text-xs text-[#a5b4fc] font-mono">7개월차 이후</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-white mb-3 font-serif-kr">
+                            BM 지속가능성 확보
+                        </h3>
+                        <p class="text-sm text-[#ddd6fe] leading-relaxed mb-6">
+                            노인 일자리 및 사회활동 지원사업 시장형 사업단으로 공식 등록합니다. 
+                            어르신 레시피 기반 팝업 밀키트·단체 도시락 주문 판매로 지속 가능한 수익을 창출합니다.
+                        </p>
+
+                        <ul class="space-y-2.5 text-xs text-[#c4b5fd] border-t border-[#4338ca]/60 pt-4">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>보건복지부 노인일자리 시장형 사업단 지정</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>동네 수제 반찬/밀키트 로컬 커머스 확장</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-[#a5b4fc]"></i>
+                                <span>인근 권역 셰어키친 거점 가맹 모델 확산</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-6 pt-3 text-[11px] text-[#a5b4fc] font-medium">
+                        지속 지표: 노인 일자리 15명 창출
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. Real Participant Stories -->
+    <section id="stories" class="py-24 bg-[#f5f7ff] border-t border-[#c7d2fe]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#4f46e5] bg-[#e0e7ff] border border-[#c7d2fe] px-3.5 py-1.5 rounded-full">
+                    Real Stories
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1e1b4b] mt-4 font-serif-kr">
+                    주방에서 피어난 <span class="text-[#4338ca]">참여자 이야기</span>
+                </h2>
+                <p class="text-[#3730a3]/80 mt-4 text-base leading-relaxed">
+                    시범 클래스를 통해 한 식구가 된 어르신과 청년의 진솔한 후기입니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Story 1: Youth -->
+                <div class="bg-white rounded-3xl p-8 sm:p-10 border border-[#c7d2fe] shadow-sm relative flex flex-col justify-between">
+                    <i class="fa-solid fa-quote-left text-3xl text-[#a5b4fc] mb-4"></i>
+                    <p class="text-[#1e1b4b] font-serif-kr italic text-lg leading-relaxed mb-6">
+                        "혼자 원룸에서 밥 먹을 땐 늘 적적하고 편의점 도시락만 먹었는데, 
+                        어르신이 '더 먹어라' 하며 갓 무친 겉절이를 밥 위에 얹어주실 때 눈물이 날 뻔했습니다. 
+                        단순히 요리를 배운 게 아니라 마음의 안식처를 얻었어요."
+                    </p>
+                    
+                    <div class="flex items-center gap-4 pt-4 border-t border-[#ede9fe]">
+                        <div class="w-12 h-12 rounded-full bg-[#3730a3] text-white font-bold flex items-center justify-center text-base">
+                            청
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-[#1e1b4b]">청년 참여자 김O진 님</h4>
+                            <p class="text-xs text-[#6366f1]">자취 3년차 대학생 · 서구 거주</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2: Senior -->
+                <div class="bg-white rounded-3xl p-8 sm:p-10 border border-[#c7d2fe] shadow-sm relative flex flex-col justify-between">
+                    <i class="fa-solid fa-quote-left text-3xl text-[#a5b4fc] mb-4"></i>
+                    <p class="text-[#1e1b4b] font-serif-kr italic text-lg leading-relaxed mb-6">
+                        "자식들 다 출가하고 나니 집에서 국 하나 끓이기도 적적했지요. 
+                        내 보잘것없는 된장찌개 비법을 젊은 친구들이 눈을 반짝이며 받아적고 
+                        맛있다고 밥 두 그릇씩 비울 때, 다시 가슴이 두근거리고 살아있는 기분이 듭니다."
+                    </p>
+                    
+                    <div class="flex items-center gap-4 pt-4 border-t border-[#ede9fe]">
+                        <div class="w-12 h-12 rounded-full bg-[#4f46e5] text-white font-bold flex items-center justify-center text-base">
+                            어
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-base text-[#1e1b4b]">어르신 셰프 박O순 님</h4>
+                            <p class="text-xs text-[#6366f1]">손맛 경력 45년 · 유성구 거주</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. Application & Schedule Section -->
+    <section id="apply" class="py-24 bg-[#e0e7ff] border-t border-[#c7d2fe]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Left Info Column -->
+                <div class="lg:col-span-5 space-y-6 text-left">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#4338ca] bg-[#ede9fe] border border-[#c7d2fe] px-3.5 py-1.5 rounded-full">
+                        Application Guide
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1e1b4b] font-serif-kr leading-tight">
+                        📅 시범 클래스<br>
+                        <span class="text-[#4338ca] underline decoration-[#a5b4fc] decoration-2 underline-offset-4">
+                            참여 신청 안내
+                        </span>
+                    </h2>
+                    <p class="text-base text-[#3730a3]/80 leading-relaxed">
+                        어르신의 정성스러운 손맛과 청년의 활기가 함께하는 따뜻한 주방으로 초대합니다. 
+                        선착순 매칭으로 진행되오니 지금 신청해 주세요.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-[#c7d2fe] shadow-xs">
+                            <div class="w-11 h-11 rounded-xl bg-[#3730a3] text-white flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-clock text-base text-[#e0e7ff]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-[#1e1b4b]">일시 및 시간</h4>
+                                <p class="text-xs text-[#4338ca] mt-0.5">매월 2, 4번째 주 토요일 11:00 ~ 13:30 (총 2시간 30분)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-[#c7d2fe] shadow-xs">
+                            <div class="w-11 h-11 rounded-xl bg-[#3730a3] text-white flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-base text-[#e0e7ff]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-[#1e1b4b]">진행 장소</h4>
+                                <p class="text-xs text-[#4338ca] mt-0.5">지역 종합사회복지관 2층 공유주방 (주차 무료 지원)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-[#c7d2fe] shadow-xs">
+                            <div class="w-11 h-11 rounded-xl bg-[#3730a3] text-white flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-users text-base text-[#e0e7ff]"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-[#1e1b4b]">모집 대상 및 비용</h4>
+                                <p class="text-xs text-[#4338ca] mt-0.5">어르신 10명 · 청년 10명 (1:1 매칭) / 참가비 전액 무료 (재료비 지원)</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Interactive Form Container -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-lg border border-[#c7d2fe]">
+                        <h3 class="text-2xl font-bold text-[#1e1b4b] font-serif-kr mb-2">
+                            셰어키친 시범 클래스 신청서
+                        </h3>
+                        <p class="text-xs text-[#6366f1] mb-6">
+                            정보를 남겨주시면 담당 퍼실리테이터가 24시간 이내에 개별 안내 드립니다.
+                        </p>
+
+                        <form id="inlineApplyForm" onsubmit="handleInlineSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-[#1e1b4b] mb-1.5">
+                                        성함 <span class="text-[#ef4444]">*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        required
+                                        placeholder="예: 홍길동"
+                                        class="w-full px-4 py-3 rounded-xl bg-[#f8faff] border border-[#c7d2fe] focus:outline-none focus:ring-2 focus:ring-[#4338ca] text-sm text-[#1e1b4b]"
+                                    >
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-[#1e1b4b] mb-1.5">
+                                        연락처 <span class="text-[#ef4444]">*</span>
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        required
+                                        placeholder="010-0000-0000"
+                                        class="w-full px-4 py-3 rounded-xl bg-[#f8faff] border border-[#c7d2fe] focus:outline-none focus:ring-2 focus:ring-[#4338ca] text-sm text-[#1e1b4b]"
+                                    >
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-[#1e1b4b] mb-1.5">
+                                    참여 구분 <span class="text-[#ef4444]">*</span>
+                                </label>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <label class="border border-[#c7d2fe] bg-[#f8faff] rounded-xl p-3 flex items-center gap-2 cursor-pointer hover:border-[#4338ca] transition-colors has-[:checked]:border-[#4338ca] has-[:checked]:bg-[#ede9fe]">
+                                        <input type="radio" name="inlineRole" value="senior" checked class="accent-[#4338ca]">
+                                        <span class="text-xs font-bold text-[#1e1b4b]">어르신 셰프 (손맛 전수)</span>
+                                    </label>
+                                    <label class="border border-[#c7d2fe] bg-[#f8faff] rounded-xl p-3 flex items-center gap-2 cursor-pointer hover:border-[#4338ca] transition-colors has-[:checked]:border-[#4338ca] has-[:checked]:bg-[#ede9fe]">
+                                        <input type="radio" name="inlineRole" value="youth" class="accent-[#4338ca]">
+                                        <span class="text-xs font-bold text-[#1e1b4b]">청년 수강생 (밥상 소통)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-[#1e1b4b] mb-1.5">희망 참여 일정</label>
+                                <div class="relative">
+                                    <select class="w-full px-4 py-3 rounded-xl bg-[#f8faff] border border-[#c7d2fe] focus:outline-none focus:ring-2 focus:ring-[#4338ca] text-sm text-[#1e1b4b] appearance-none">
+                                        <option>매월 2주차 토요일 11:00 ~ 13:30</option>
+                                        <option>매월 4주차 토요일 11:00 ~ 13:30</option>
+                                        <option>담당자와 일정 조율 후 결정</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down text-xs text-[#6366f1] absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-[#1e1b4b] mb-1.5">
+                                    신청 동기 및 기대사항 (선택)
+                                </label>
+                                <textarea
+                                    rows="3"
+                                    placeholder="예: 어르신의 깊은 김치찌개 손맛을 배우고 함께 따뜻한 식사를 나누고 싶습니다."
+                                    class="w-full px-4 py-3 rounded-xl bg-[#f8faff] border border-[#c7d2fe] focus:outline-none focus:ring-2 focus:ring-[#4338ca] text-sm text-[#1e1b4b]"
+                                ></textarea>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="w-full bg-[#3730a3] hover:bg-[#312e81] text-white font-bold py-4 rounded-xl shadow-md hover:shadow-lg transition-all text-base transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer"
+                            >
+                                <i class="fa-solid fa-paper-plane text-sm"></i>
+                                <span>셰어키친 시범 클래스 참여 신청하기</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. Footer (Midnight Indigo) -->
+    <footer class="bg-[#0f172a] text-[#cbd5e1] py-14 border-t border-[#1e293b]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-b border-[#1e293b] pb-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-9 h-9 rounded-full bg-[#3730a3] text-white flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-utensils text-[#c7d2fe] text-sm"></i>
+                        </div>
+                        <span class="font-extrabold text-lg text-white font-serif-kr">
+                            세대 융합 셰어키친 퍼실리테이터
+                        </span>
+                    </div>
+                    <p class="text-xs text-[#94a3b8] leading-relaxed max-w-md">
+                        어르신의 삶의 지혜와 청년의 온기를 이어 지역 공유주방을 기반으로 
+                        따뜻한 식문화 공동체를 복원하는 창직 커뮤니티 비즈니스 프로젝트입니다.
+                    </p>
+                </div>
+                
+                <div class="text-left md:text-right space-y-1.5 text-xs text-[#94a3b8]">
+                    <p><span class="text-white font-semibold">운영 거점:</span> 지역 종합사회복지관 2층 공유주방</p>
+                    <p><span class="text-white font-semibold">운영 일시:</span> 매월 2, 4주차 토요일 11:00 ~ 13:30</p>
+                    <p><span class="text-white font-semibold">주관:</span> 세대 융합 셰어키친 퍼실리테이터 창직 사업단</p>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#64748b] gap-4">
+                <p>&copy; 2026 세대 융합 셰어키친 (Intergenerational Kitchen Facilitator). All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">개인정보 처리방침</a>
+                    <a href="#" class="hover:text-white transition-colors">이용약관</a>
+                    <a href="#about" class="hover:text-white transition-colors">사업소개</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pop-up Modal Form -->
+    <div id="registerModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-[#c7d2fe] my-8">
+            <button
+                onclick="closeModal()"
+                class="absolute top-5 right-5 text-[#6366f1] hover:text-[#1e1b4b] w-8 h-8 rounded-full bg-[#ede9fe] flex items-center justify-center transition-colors cursor-pointer"
+                aria-label="모달 닫기"
+            >
+                <i class="fa-solid fa-xmark text-base"></i>
+            </button>
+
+            <div class="mb-6 text-center">
+                <div class="w-12 h-12 bg-[#3730a3] text-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-xs">
+                    <i class="fa-solid fa-calendar-check text-xl text-[#c7d2fe]"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-[#1e1b4b] font-serif-kr">
+                    시범 클래스 참여 신청
+                </h3>
+                <p class="text-xs text-[#6366f1] mt-1">
+                    따뜻한 한 끼와 진솔한 대화가 기다리는 셰어키친에 오신 것을 환영합니다.
+                </p>
+            </div>
+
+            <form id="modalApplyForm" onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-[#1e1b4b] mb-1">
+                        성함 <span class="text-[#ef4444]">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        required
+                        placeholder="예: 홍길동"
+                        class="w-full px-4 py-2.5 rounded-xl bg-[#f8faff] border border-[#c7d2fe] focus:outline-none focus:ring-2 focus:ring-[#4338ca] text-sm text-[#1e1b4b]"
+                    >
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-[#1e1b4b] mb-1">
+                        참여 구분 <span class="text-[#ef4444]">*</span>
+                    </label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="border border-[#c7d2fe] bg-[#f8faff] rounded-xl p-3 flex items-center gap-2 cursor-pointer hover:border-[#4338ca] transition-colors has-[:checked]:border-[#4338ca] has-[:checked]:bg-[#ede9fe]">
+                            <input type="radio" name="modalRole" value="senior" checked class="accent-[#4338ca]">
+                            <span class="text-xs font-bold text-[#1e1b4b]">어르신 셰프</span>
+                        </label>
+                        <label class="border border-[#c7d2fe] bg-[#f8faff] rounded-xl p-3 flex items-center gap-2 cursor-pointer hover:border-[#4338ca] transition-colors has-[:checked]:border-[#4338ca] has-[:checked]:bg-[#ede9fe]">
+                            <input type="radio" name="modalRole" value="youth" class="accent-[#4338ca]">
+                            <span class="text-xs font-bold text-[#1e1b4b]">청년 수강생</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-[#1e1b4b] mb-1">
+                        연락처 <span class="text-[#ef4444]">*</span>
+                    </label>
+                    <input
+                        type="tel"
+                        required
+                        placeholder="010-0000-0000"
+                        class="w-full px-4 py-2.5 rounded-xl bg-[#f8faff] border border-[#c7d2fe] focus:outline-none focus:ring-2 focus:ring-[#4338ca] text-sm text-[#1e1b4b]"
+                    >
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-[#1e1b4b] mb-1">신청 동기</label>
+                    <textarea
+                        rows="2"
+                        placeholder="간단한 참여 계기를 작성해 주세요."
+                        class="w-full px-4 py-2.5 rounded-xl bg-[#f8faff] border border-[#c7d2fe] focus:outline-none focus:ring-2 focus:ring-[#4338ca] text-sm text-[#1e1b4b]"
+                    ></textarea>
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-[#3730a3] hover:bg-[#312e81] text-white font-bold py-3.5 rounded-xl shadow-md transition-all text-sm mt-2 cursor-pointer"
+                >
+                    신청서 제출하기
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-[#1e1b4b] text-white px-6 py-4 rounded-2xl shadow-2xl border border-[#4338ca] flex items-center gap-3 transition-all duration-300">
+        <div class="w-8 h-8 rounded-full bg-[#4f46e5] text-white flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-check text-sm"></i>
+        </div>
+        <div>
+            <h5 class="font-bold text-sm">신청 완료!</h5>
+            <p id="toastMessage" class="text-xs text-[#c7d2fe]">시범 클래스 신청이 성공적으로 접수되었습니다.</p>
+        </div>
+    </div>
+
+    <!-- React root mount for Vite compatibility -->
+    <div id="root" class="hidden"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Vanilla JS Interactions -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openModal() {
+            const modal = document.getElementById('registerModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('registerModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('registerModal');
+            if (e.target === modal) closeModal();
+        });
+
+        function showSuccessToast(msg) {
+            const toast = document.getElementById('toast');
+            if (msg) document.getElementById('toastMessage').textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        function handleInlineSubmit(e) {
+            e.preventDefault();
+            document.getElementById('inlineApplyForm').reset();
+            showSuccessToast('시범 클래스 신청이 성공적으로 접수되었습니다! 담당 퍼실리테이터가 안내드립니다.');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            closeModal();
+            document.getElementById('modalApplyForm').reset();
+            showSuccessToast('시범 클래스 신청이 완료되었습니다! 확인 후 연락드리겠습니다.');
+        }
+
+        function filterPrograms(category) {
+            const cards = document.querySelectorAll('.program-card');
+            const tabs = document.querySelectorAll('.prog-tab');
+
+            tabs.forEach(tab => {
+                tab.className = 'prog-tab px-4 py-2 text-xs font-bold rounded-full transition-all cursor-pointer bg-white text-[#312e81] hover:bg-[#ede9fe]';
+            });
+            const activeTab = document.getElementById('tab-' + category);
+            if (activeTab) {
+                activeTab.className = 'prog-tab px-4 py-2 text-xs font-bold rounded-full transition-all cursor-pointer bg-[#3730a3] text-white shadow-sm';
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
